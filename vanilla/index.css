@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    text-decoration: none;
+    font-size: 20px;
+    border:0;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.login {
+    border-radius: 3px;
+    margin-right: 5vw;
+    padding: 8px;
+}
+
+.login:hover {
+    background-color: rgb(115, 197, 224);
+}
+
+#menu_btn {
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: red;
+    border-radius: 3px;
+    transition: all 0.18s ease-in-out;
+    height: 70%;
+    transform-origin: left;
+}
+
+#menu_btn:hover {
+    transform: scale(1.2);
+}
+
+.heading {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#app {
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.square {
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.square-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.square-front, .square-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.square-front {
+    border-radius: 8px;
+    background-color: grey;
+    color: black;
+}
+
+.square-back {
+    border-radius: 8px;
+    background-color: rgb(156, 63, 63);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.memo_img {
+    width: 100px;
+    border-radius: 8px;
+}
+
+.flipped .square-inner {
+    transform: rotateY(180deg);
+}
+
+.user-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

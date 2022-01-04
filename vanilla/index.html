@@ -2,9 +2,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
     <title>Memo Game App</title>
   </head>
   <body>
-    
+
+    <div class="container">
+      <div class="heading">
+        <button id="menu_btn">menu</button>
+        <h1 class="pagetitle">
+          Image Memory Game
+        </h1>
+        <button class="login">Log in</button>
+      </div>
+      <div class="user-score">
+        <h3 class="username"></h3>
+        <p>SCORE: <span id='score'></span></p>
+      </div>
+      <div id="app">
+        <button id="start-game">Start Game</button>
+      </div>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
   </body>
 </html>
